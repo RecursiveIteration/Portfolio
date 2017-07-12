@@ -9,11 +9,12 @@ function displayMenu () {
 }
 
 //create a Project object
-function Project (title, githubURL, synopsis, deploymentURL) {
-  this.title = title;
-  this.githubURL = githubURL;
-  this.synopsis = synopsis;
-  this.deploymentURL = deploymentURL;
+function Project (projectObj) {
+  this.title = projectObj.title;
+  this.githubUrl = projectObj.githubUrl;
+  this.deploymentUrl = projectObj.deploymentUrl;
+  this.imageUrl = projectObj.imageUrl;
+  this.synopsis = projectObj.synopsis;
 }
 
 Project.prototype.render = function () {
