@@ -1,5 +1,13 @@
 'use strict';
 
+$(function () {
+  $('#hamburger').on('mouseover click', displayMenu);
+});
+
+function displayMenu () {
+  $('nav ul').show();
+}
+
 //create a Project object
 function Project (title, githubURL, synopsis, deploymentURL) {
   this.title = title;
