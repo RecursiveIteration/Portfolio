@@ -1,0 +1,8 @@
+nav ul {
+  display: none;
+}
+
+#hamburger {
+  text-align: right;
+  font-size: 2em;
+}
