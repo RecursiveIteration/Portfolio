@@ -6,3 +6,7 @@ nav ul {
   text-align: right;
   font-size: 2em;
 }
+
+.template {
+  display: none;
+}
