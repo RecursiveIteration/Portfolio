@@ -1,5 +1,16 @@
 'use strict';
 
+var projects = [];
+
+projectData.forEach(function(projectObj) {
+  projects.push(new Project(projectObj));
+});
+
+projects.forEach(function(project) {
+  $('#projects').append(project.render());
+});
+
+
 $(function () {
   $('#hamburger').on('mouseover click', displayMenu);
 });
@@ -18,5 +29,10 @@ function Project (projectObj) {
 }
 
 Project.prototype.render = function () {
-  //Create Project display in DOM
+  var $article = $('.template').clone();
+  $article.show();
+  $article.find('h1').text = this.title;
+  $article.find('a:nth-of-type(1)').prop('href', this.githubUrl);
+  $article.find('a:nth-of-type(2)').prop('href', this.deploymentUrl);
+  $article.find('p').text = this.synopsis;
 };
