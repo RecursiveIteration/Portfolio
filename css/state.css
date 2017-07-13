@@ -1,13 +1,13 @@
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   #hamburger {
     display: none;
   }
 
-  nav ul {
+  .main-nav ul {
     display: inline-block;
   }
 
-  nav ul li {
+  .main-nav ul li {
     display: inline;
     margin: 20px;
   }
