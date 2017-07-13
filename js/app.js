@@ -2,22 +2,6 @@
 
 var projects = [];
 
-projectData.forEach(function(projectObj) {
-  projects.push(new Project(projectObj));
-});
-
-projects.forEach(function(project) {
-  $('#projects').append(project.render());
-});
-
-
-$(function () {
-  $('#hamburger').on('mouseover click', displayMenu);
-});
-
-function displayMenu () {
-  $('nav ul').show();
-}
 
 //create a Project object
 function Project (projectObj) {
@@ -29,10 +13,19 @@ function Project (projectObj) {
 }
 
 Project.prototype.render = function () {
-  var $article = $('.template').clone();
+  var $article = $('#template').clone();
   $article.show();
-  $article.find('h1').text = this.title;
+  $article.find('h1').text(this.title);
   $article.find('a:nth-of-type(1)').prop('href', this.githubUrl);
   $article.find('a:nth-of-type(2)').prop('href', this.deploymentUrl);
-  $article.find('p').text = this.synopsis;
+  $article.find('p').text(this.synopsis);
+  return $article;
 };
+
+projectData.forEach(function(projectObj) {
+  projects.push(new Project(projectObj));
+});
+
+projects.forEach(function(project) {
+  $('#projects').append(project.render());
+});
