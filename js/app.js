@@ -23,10 +23,16 @@ Project.prototype.render = function () {
 
 function renderBio () {
   var $bio = $('#bioInfo');
-  $bio.find('h1').text(bioData.name);
+  $bio.find('h2').text(bioData.name);
   $bio.find('img').attr('src', bioData.imageUrl);
   bioData.bio.forEach(function (data) {
     $bio.find('.bio').append('<p>' + data + '</p>');
+  });
+  bioData.jobHistory.forEach(function (data) {
+    $bio.find('.work-history').append('<li>' + data + '</li>');
+  });
+  bioData.skills.forEach(function (data) {
+    $bio.find('.job-skills').append('<li>' + data + '</li>');
   });
 }
 

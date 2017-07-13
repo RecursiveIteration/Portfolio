@@ -4,8 +4,8 @@ var bioData = {
   name: 'James C. Woodson',
   imageUrl: 'images/james.jpg',
   jobHistory: [
-    ['Western Fisheries Research Center', 'Research Technician'],
-    ['MDS Pharma Services', 'Assistant Scientist']
+    'Western Fisheries Research Center - Research Technician',
+    'MDS Pharma Services - Assistant Scientist'
   ],
   skills: [
     'JavaScript',
