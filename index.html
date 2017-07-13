@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Project Portfolio</title>
+    <meta name="viewport" conent="width=device-width, initial-scale=1" />
     <link href="vendor/meyerweb_cssReset.css"
       type="text/css" rel="stylesheet" />
     <link href="vendor/icomoon/style.css" type="text/css" rel="stylesheet" />
@@ -12,23 +13,28 @@
     <link href="css/theme.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-    <nav>
+    <nav class="main-nav">
       <div id="hamburger"><i class="icon-menu"></i></div>
       <ul>
         <li>Bio</li>
-        <li>Contact</li>
         <li>Projects</li>
+        <li>Contact</li>
       </ul>
     </nav>
     <img src="images/james.jpg" />
     <section id="projects">
-      <article class="template">
-        <h1>Project Name</h1>
-        <a href="githubUrl"></a>
-        <a href="deploymentUrl"></a>
-        <img src="imageUrl" />
-        <p>Synopsis</p>
+      <article id="template">
+        <h1></h1> <!-- Project Title -->
+        <a>View source on Github</a> <!-- githubUrl -->
+        <a>Check out the app here!</a> <!-- deploymentUrl -->
+        <img /> <!-- imageUrl -->
+        <p></p> <!-- Synopsis -->
       </article>
+    </section>
+    <section id="contact_info">
+      <h2>Contact James C. Woodson</h2>
+      <a href="mailto:JamesCW_2001@hotmail.com"><i class="icon-mail4"></i></a>
+      <a href="https://github.com/RecursiveIteration"><i class="icon-github"></a>
     </section>
   </body>
   <script
@@ -36,5 +42,6 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous">
   </script>
+  <script src="js/projectData.js"></script>
   <script src="js/app.js"></script>
 </html>
