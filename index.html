@@ -11,6 +11,26 @@
     <link href="css/module.css" type="text/css" rel="stylesheet" />
     <link href="css/state.css" type="text/css" rel="stylesheet" />
     <link href="css/theme.css" type="text/css" rel="stylesheet" />
+    <script type="text/x-handlebars-template" id="handlebars-project-template">
+      <article>
+        <h1>{{title}}</h1>
+        <img src="{{imageUrl}}" />
+        <a href="{{githubUrl}}"><i class="icon-github"></i>View source on Github</a>
+        <a href="{{}}">Check out the app here!</a>
+        <p>{{synopsis}}<p>
+      </article>
+    </script>
+
+    <!-- Old Template! -->
+    <article class="template">
+      <h1></h1> <!-- Project Title -->
+      <img /> <!-- imageUrl -->
+      <a><i class="icon-github"></i>View source on Github</a> <!-- githubUrl -->
+      <a>Check out the app here!</a> <!-- deploymentUrl -->
+      <p></p> <!-- Synopsis -->
+    </article>
+    <!-- End of Old Template! -->
+
   </head>
   <body>
     <nav class="main-nav">
@@ -32,13 +52,6 @@
       <ul class="job-skills"></ul> <!-- list of job skills -->
     </section>
     <section id="projects" class="tab-section">
-      <article class="template">
-        <h1></h1> <!-- Project Title -->
-        <img /> <!-- imageUrl -->
-        <a><i class="icon-github"></i>View source on Github</a> <!-- githubUrl -->
-        <a>Check out the app here!</a> <!-- deploymentUrl -->
-        <p></p> <!-- Synopsis -->
-      </article>
     </section>
     <section id="contact_info">
       <h2>Contact James C. Woodson</h2>
@@ -50,6 +63,8 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js">
   </script>
   <script src="js/projectData.js"></script>
   <script src="js/bioData.js"></script>
