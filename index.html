@@ -16,12 +16,12 @@
     <nav class="main-nav">
       <div id="hamburger"><i class="icon-menu"></i></div>
       <ul>
-        <li><a href="#" class="icon-home">Bio</a></li>
-        <li><a href="#" class="icon-drawer">Projects</a></li>
+        <li><a href="#" class="icon-home tab" data-content="bioInfo">Bio</a></li>
+        <li><a href="#" class="icon-drawer tab" data-content="projects">Projects</a></li>
         <li><a href="#contact_info" class="icon-user">Contact</a></li>
       </ul>
     </nav>
-    <section id="bioInfo">
+    <section id="bioInfo" class="tab-section">
       <h1>About Me</h1>
       <img />
       <h2></h2> <!-- name -->
@@ -31,7 +31,7 @@
       <h3>My job skills:</h3>
       <ul class="job-skills"></ul> <!-- list of job skills -->
     </section>
-    <section id="projects">
+    <section id="projects" class="tab-section">
       <article class="template">
         <h1></h1> <!-- Project Title -->
         <img /> <!-- imageUrl -->
@@ -54,4 +54,5 @@
   <script src="js/projectData.js"></script>
   <script src="js/bioData.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/displayManager.js"></script>
 </html>
