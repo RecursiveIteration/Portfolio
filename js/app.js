@@ -11,17 +11,18 @@ function Project (projectObj) {
   this.synopsis = projectObj.synopsis;
 }
 
-Project.prototype.render = function () {
+Project.prototype.toHtml = function () {
   var $article = $('.template').clone();
   $article.removeClass('template');
   $article.find('h1').text(this.title);
+  $article.find('img').attr('src', this.imageUrl);
   $article.find('a:nth-of-type(1)').prop('href', this.githubUrl);
   $article.find('a:nth-of-type(2)').prop('href', this.deploymentUrl);
   $article.find('p').text(this.synopsis);
   return $article;
 };
 
-function renderBio () {
+function bioToHtml () {
   var $bio = $('#bioInfo');
   $bio.find('h2').text(bioData.name);
   $bio.find('img').attr('src', bioData.imageUrl);
@@ -36,12 +37,12 @@ function renderBio () {
   });
 }
 
-renderBio();
+bioToHtml();
 
 projectData.forEach(function(projectObj) {
   projects.push(new Project(projectObj));
 });
 
 projects.forEach(function(project) {
-  $('#projects').append(project.render());
+  $('#projects').append(project.toHtml());
 });
