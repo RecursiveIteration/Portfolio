@@ -11,27 +11,19 @@
     <link href="css/module.css" type="text/css" rel="stylesheet" />
     <link href="css/state.css" type="text/css" rel="stylesheet" />
     <link href="css/theme.css" type="text/css" rel="stylesheet" />
+
     <script type="text/x-handlebars-template" id="handlebars-project-template">
       <article>
-        <h1>{{title}}</h1>
-        <img src="{{imageUrl}}" />
-        <a href="{{githubUrl}}"><i class="icon-github"></i>View source on Github</a>
-        <a href="{{}}">Check out the app here!</a>
-        <p>{{synopsis}}<p>
+        <h1>{{title}}</h1> <!-- Project Title -->
+        <img src="{{imageUrl}}" /> <!-- imageUrl -->
+        <a href="{{githubUrl}}"><i class="icon-github"></i>View source on Github</a> <!-- githubUrl -->
+        <a href="{{deploymentUrl}}">Check out the app here!</a> <!-- deploymentUrl -->
+        <p>{{synopsis}}<p> <!-- Synopsis -->
       </article>
     </script>
-
-    <!-- Old Template! -->
-    <article class="template">
-      <h1></h1> <!-- Project Title -->
-      <img /> <!-- imageUrl -->
-      <a><i class="icon-github"></i>View source on Github</a> <!-- githubUrl -->
-      <a>Check out the app here!</a> <!-- deploymentUrl -->
-      <p></p> <!-- Synopsis -->
-    </article>
-    <!-- End of Old Template! -->
-
+    
   </head>
+
   <body>
     <nav class="main-nav">
       <div id="hamburger"><i class="icon-menu"></i></div>

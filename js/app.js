@@ -12,14 +12,10 @@ function Project (projectObj) {
 }
 
 Project.prototype.toHtml = function () {
-  var $article = $('.template').clone();
-  $article.removeClass('template');
-  $article.find('h1').text(this.title);
-  $article.find('img').attr('src', this.imageUrl);
-  $article.find('a:nth-of-type(1)').prop('href', this.githubUrl);
-  $article.find('a:nth-of-type(2)').prop('href', this.deploymentUrl);
-  $article.find('p').text(this.synopsis);
-  return $article;
+  var projectTemplate = $('#handlebars-project-template').html();
+  var projectTemplateCompiler = Handlebars.compile(projectTemplate);
+  var compiledProject = projectTemplateCompiler(this);
+  $('#projects').append(compiledProject);
 };
 
 function bioToHtml () {
