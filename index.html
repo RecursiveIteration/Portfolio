@@ -19,9 +19,10 @@
         <a href="{{githubUrl}}"><i class="icon-github"></i>View source on Github</a> <!-- githubUrl -->
         <a href="{{deploymentUrl}}">Check out the app here!</a> <!-- deploymentUrl -->
         <p>{{synopsis}}<p> <!-- Synopsis -->
+        <hr />
       </article>
     </script>
-    
+
   </head>
 
   <body>
@@ -32,6 +33,7 @@
         <li><a href="#" class="icon-drawer tab" data-content="projects">Projects</a></li>
         <li><a href="#contact_info" class="icon-user">Contact</a></li>
       </ul>
+      <hr />
     </nav>
     <section id="bioInfo" class="tab-section">
       <h1>About Me</h1>
@@ -42,6 +44,7 @@
       <ul class="work-history"></ul> <!-- work history -->
       <h3>My job skills:</h3>
       <ul class="job-skills"></ul> <!-- list of job skills -->
+      <hr />
     </section>
     <section id="projects" class="tab-section">
     </section>
@@ -58,8 +61,10 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js">
   </script>
-  <script src="js/projectData.js"></script>
   <script src="js/bioData.js"></script>
   <script src="js/app.js"></script>
   <script src="js/displayManager.js"></script>
+  <script>
+    Project.fetchAll();
+  </script>
 </html>

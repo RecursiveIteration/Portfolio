@@ -1,7 +1,5 @@
 'use strict';
 
-var projects = [];
-
 //create a Project object
 function Project (projectObj) {
   this.title = projectObj.title;
@@ -11,11 +9,22 @@ function Project (projectObj) {
   this.synopsis = projectObj.synopsis;
 }
 
+Project.projects = [];
+
 Project.prototype.toHtml = function () {
   var projectTemplate = $('#handlebars-project-template').html();
   var projectTemplateCompiler = Handlebars.compile(projectTemplate);
   var compiledProject = projectTemplateCompiler(this);
   $('#projects').append(compiledProject);
+};
+
+Project.fetchAll = function () {
+  $.getJSON('/data/projects.json').then(function(data) {
+    data.forEach(function (project) {
+      Project.projects.push(new Project(project));
+    });
+    displayProjects();
+  });
 };
 
 function bioToHtml () {
@@ -35,10 +44,8 @@ function bioToHtml () {
 
 bioToHtml();
 
-projectData.forEach(function(projectObj) {
-  projects.push(new Project(projectObj));
-});
-
-projects.forEach(function(project) {
-  $('#projects').append(project.toHtml());
-});
+function displayProjects() {
+  Project.projects.forEach(function(project) {
+    $('#projects').append(project.toHtml());
+  });
+}
