@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A SPA for presenting my interests and experience.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RecursiveIteration/Portfolio.git"
+  },
+  "author": "James C. Woodson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RecursiveIteration/Portfolio/issues"
+  },
+  "homepage": "https://github.com/RecursiveIteration/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
