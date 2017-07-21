@@ -9,3 +9,7 @@
 .main-nav:hover ul {
   display: block;
 }
+
+.main-nav ul li {
+  font-size: 1.5em;
+}
