@@ -29,7 +29,7 @@ Project.fetchAll = function () {
 
 function bioToHtml () {
   var $bio = $('#bioInfo');
-  $bio.find('h2').text(bioData.name);
+  $bio.find('h1').text(bioData.name);
   $bio.find('img').attr('src', bioData.imageUrl);
   bioData.bio.forEach(function (data) {
     $bio.find('.bio').append('<p>' + data + '</p>');
