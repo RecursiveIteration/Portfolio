@@ -2,6 +2,8 @@
 
 var app = app || {};
 
-(function (module) {
-
-})(app);
+// page('/', );
+// page('/bio', );
+// page('/projects', );
+//
+// page();
