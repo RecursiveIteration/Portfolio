@@ -13,9 +13,10 @@ var app = app || {};
 
   Project.projects = [];
 
-  Project.loadProjects = function () {
+  Project.loadProjects = function (callback) {
     $.getJSON('/data/projects.json').then(function(data) {
       data.map((project) => Project.projects.push(new Project(project)));
+      callback();
     })
   };
   module.Project = Project;

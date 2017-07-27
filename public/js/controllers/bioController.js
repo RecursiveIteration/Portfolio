@@ -11,4 +11,5 @@ var app = app || {};
       app.bioView.showBioPage(); // just show it again, if it's already been loaded
     }
   }
+
 })(app);
