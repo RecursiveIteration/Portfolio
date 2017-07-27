@@ -1,10 +1,10 @@
 [
   {
-    title:          "Cookie Stand",
-    githubUrl:      "https://github.com/RecursiveIteration/cookie-stand",
-    deploymentUrl:  "",
-    imageUrl:       "images/cookie.jpg",
-    synopsis:       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ex libero, congue eget malesuada vitae, auctor quis libero. Praesent dignissim, dolor vel rutrum hendrerit, ipsum elit lobortis lectus, sit amet ultricies nisl mauris et felis. In et fermentum turpis. Quisque vestibulum malesuada tellus, semper consequat nunc ultrices ac. In ornare venenatis semper. Vestibulum venenatis ex non lacus sodales tempor. Quisque ut arcu eget augue mollis cursus vitae eu libero. Suspendisse tincidunt turpis mattis tellus iaculis, ac fermentum orci finibus. Nam nisl quam, finibus quis ante sollicitudin, convallis posuere massa. Phasellus placerat pellentesque risus sit amet facilisis. Proin ornare eleifend risus, nec viverra turpis lacinia sit amet. Fusce porttitor arcu quis tincidunt congue. Nulla pretium odio ullamcorper, lacinia arcu a, euismod nisl."
+    "title":          "Cookie Stand",
+    "githubUrl":      "https://github.com/RecursiveIteration/cookie-stand",
+    "deploymentUrl":  "",
+    "imageUrl":       "images/cookie.jpg",
+    "synopsis":       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ex libero, congue eget malesuada vitae, auctor quis libero. Praesent dignissim, dolor vel rutrum hendrerit, ipsum elit lobortis lectus, sit amet ultricies nisl mauris et felis. In et fermentum turpis. Quisque vestibulum malesuada tellus, semper consequat nunc ultrices ac. In ornare venenatis semper. Vestibulum venenatis ex non lacus sodales tempor. Quisque ut arcu eget augue mollis cursus vitae eu libero. Suspendisse tincidunt turpis mattis tellus iaculis, ac fermentum orci finibus. Nam nisl quam, finibus quis ante sollicitudin, convallis posuere massa. Phasellus placerat pellentesque risus sit amet facilisis. Proin ornare eleifend risus, nec viverra turpis lacinia sit amet. Fusce porttitor arcu quis tincidunt congue. Nulla pretium odio ullamcorper, lacinia arcu a, euismod nisl."
   },
   {
     "title":          "Bus Mall",
