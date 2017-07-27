@@ -2,8 +2,8 @@
 
 var app = app || {};
 
-// page('/', );
-// page('/bio', );
+page('/', app.bioController);
+page('/bio', app.bioController);
 // page('/projects', );
 //
-// page();
+page();
