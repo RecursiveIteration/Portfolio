@@ -5,22 +5,22 @@ var app = app || {};
 (function (module) {
   let projectsView = {};
 
-  projectsView.showProjects = function () {
+  projectsView.showProjectsPage = function () {
     $('.tab-section').hide();
     $('#projects').show();
   };
 
-  projectsView.initProjectsView = function () {
+  projectsView.initProjectsPage = function () {
 
-    projectsView.showProjects();
+    projectsView.showProjectsPage();
     projectsToHtml();
 
     function projectsToHtml () {
-      console.log("trying to fill out project template!")
       var projectTemplate = $('#handlebars-project-template').html();
       var projectTemplateCompiler = Handlebars.compile(projectTemplate);
-      var compiledProject = projectTemplateCompiler(app.Project.projects);
-      $('#projects').append(compiledProject);
+      app.Project.projects.map((project) =>
+        $('#projects').append(projectTemplateCompiler(project))
+      )
     }
   }
   module.projectsView = projectsView;
