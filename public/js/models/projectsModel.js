@@ -14,8 +14,15 @@ var app = app || {};
   Project.projects = [];
 
   Project.loadProjects = function (callback) {
-    $.getJSON('/data/projects.json').then(function(data) {
+    $.getJSON('/data/projects.json')
+    .then(function (data) {
       data.map((project) => Project.projects.push(new Project(project)));
+    });
+    $.ajax({
+      url: '/github/user/repos',
+      method: 'GET'
+    }).then((data) => {
+      console.log(data);
       callback();
     })
   };
