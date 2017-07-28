@@ -5,8 +5,7 @@ var app = app || {};
 (function (module) {
   function Project (projectObj) {
     this.title = projectObj.title;
-    this.githubUrl = projectObj.githubUrl;
-    this.deploymentUrl = projectObj.deploymentUrl;
+    this.githubName = projectObj.githubName;
     this.imageUrl = projectObj.imageUrl;
     this.synopsis = projectObj.synopsis;
   }
@@ -22,7 +21,8 @@ var app = app || {};
       url: '/github/user/repos',
       method: 'GET'
     }).then((data) => {
-      console.log(data);
+      let projectNames = Project.projects.map(proj => proj.githubName);
+      data.filter(repo => projectNames.includes(repo.name)).map();
       callback();
     })
   };
