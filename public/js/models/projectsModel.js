@@ -28,7 +28,7 @@ var app = app || {};
       Project.projects.map(proj => {
         let currentProject = data.filter(p => p.name === proj.githubName)[0];
         proj.githubUrl = currentProject.html_url;
-        proj.created = currentProject.created_at;
+        proj.created = new Date(currentProject.created_at).toDateString();
       });
       callback();
     })
