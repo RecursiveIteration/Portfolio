@@ -13,18 +13,26 @@ var app = app || {};
   Project.projects = [];
 
   Project.loadProjects = function (callback) {
-    $.getJSON('/data/projects.json')
-    .then(function (data) {
+    $.getJSON('/data/projects.json').then(function (data) {
       data.map((project) => Project.projects.push(new Project(project)));
+      loadProjectsFromGithub(callback);
     });
+  };
+
+  function loadProjectsFromGithub (callback) {
     $.ajax({
       url: '/github/user/repos',
       method: 'GET'
-    }).then((data) => {
-      let projectNames = Project.projects.map(proj => proj.githubName);
-      data.filter(repo => projectNames.includes(repo.name)).map();
+    })
+    .then(data => {
+      Project.projects.map(proj => {
+        let currentProject = data.filter(p => p.name === proj.githubName)[0];
+        proj.githubUrl = currentProject.html_url;
+        proj.created = currentProject.created_at;
+      });
       callback();
     })
-  };
+  }
+
   module.Project = Project;
 })(app);
