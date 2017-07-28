@@ -7,6 +7,7 @@ var app = app || {};
 
   projectsView.showProjectsPage = function () {
     $('.tab-section').hide();
+    $('#projects').empty();
     $('#projects').show();
   };
 

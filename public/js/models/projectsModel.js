@@ -13,6 +13,7 @@ var app = app || {};
   Project.projects = [];
 
   Project.loadProjects = function (callback) {
+    Project.projects = []; // empty the projects array
     $.getJSON('/data/projects.json').then(function (data) {
       data.map((project) => Project.projects.push(new Project(project)));
       loadProjectsFromGithub(callback);
