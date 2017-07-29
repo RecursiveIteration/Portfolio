@@ -14,8 +14,8 @@
 
     <script type="text/x-handlebars-template" id="handlebars-project-template">
       <article>
-        <h1>{{title}}</h1> <!-- Project Title -->
-        <img src="{{imageUrl}}" /> <!-- imageUrl -->
+        <h1><a href="/projects/{{githubName}}">{{title}}</a></h1> <!-- Project Title -->
+        <img src="/{{imageUrl}}" /> <!-- imageUrl -->
         <a href="{{githubUrl}}"><i class="icon-github"></i>View source on Github</a> <!-- githubUrl -->
         <p>Repo created on: {{created}}</p> <!-- creation date -->
         <p>{{synopsis}}<p> <!-- Synopsis -->
